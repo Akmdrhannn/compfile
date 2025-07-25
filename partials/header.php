@@ -10,9 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="#about">Tentang Kami</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
-        <li class="nav-item"><a class="nav-link" href="#branches">Cabang</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#membership">Membership</a></li>
+        <li class="nav-item"><a class="nav-link" href="#career">Karir</a></li>
+        <li class="nav-item"><a class="nav-link" href="#branches">Cabang</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
       </ul>
     </div>

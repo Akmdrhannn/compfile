@@ -25,7 +25,7 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="public/img/1.jpg" class="d-block w-100 slider-img" alt="Slide 1" />
+          <img src="public/img/pict1.png" class="d-block w-100 slider-img" alt="Slide 1" />
         </div>
         <div class="carousel-item">
           <img src="public/img/2.jpg" class="d-block w-100 slider-img" alt="Slide 2" />
@@ -54,26 +54,48 @@
     <div class="container">
       <h2 class="section-title mb-3">Who are we ?</h2>
       <p>Papaya Fresh Gallery Surabaya berdiri sejak 11 Juni 1995. Bergerak di bidang Supermarket dengan mengutamakan kebudayaan Jepang. Papaya Fresh Gallery memiliki beberapa cabang di Indonesia yaitu Jakarta, Bandung, Surabaya dan Bali. Papaya Fresh Gallery di Surabaya memiliki 3 cabang antara lain Darmo Permai, Margorejo dan Pakuwon City</p>
-
+      <p></p>
     </div>
   </section>
 
   <!-- Services -->
   <?php include('partials/services.php'); ?>
-
-  <!-- Branches -->
-  <?php include('partials/branches.php'); ?>
-
   <!-- Membership -->
   <?php include('partials/membership.php'); ?>
-
+  <!-- Career -->
+  <?php include('partials/career.php'); ?>
+  <!-- Branches -->
+  <?php include('partials/branches.php'); ?>
   <!-- Contact -->
   <?php include('partials/contact.php'); ?>
-
   <!-- Footer -->
   <?php include('partials/footer.php'); ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const faders = document.querySelectorAll('.fade-in-section');
+
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px"
+      };
+
+      const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          } else {
+            entry.target.classList.remove('is-visible');
+          }
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </body>
 
 </html>
